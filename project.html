@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRESH FEAST - Enjoy the Taste</title>
+    
+
+    <style>
+        /* Basic Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            background: radial-gradient(circle, rgba(255, 100, 60, 1) 0%, rgba(255, 180, 90, 1) 100%);
+            
+        }
+
+        header {
+            background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(154, 109, 55) 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .main-content h2 {
+            font-size: 2.5em;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 2s ease-out 1s forwards;
+        }
+
+        .menu-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            opacity: 0;
+            animation: fadeIn 2s ease-out 2s forwards;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 0 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 200px;
+            width: 200px;
+        }
+
+        .menu-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes backgroundAnimation {
+    0% {
+        background: url(—Pngtree—fine\ rice\ vegetarian\ simple\ food_997793.jpg) no-repeat center center/cover;
+        transform: scale(1.1);
+    }
+    50% {
+        background: url(BG2.jpeg) no-repeat center center/cover;
+        transform: scale(1.05);
+    }
+    100% {
+        background: url(—Pngtree—fine\ rice\ vegetarian\ simple\ food_997793.jpg) no-repeat center center/cover;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes splashAnimation {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+    25% {
+        transform: scale(1.2) rotate(10deg);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+    75% {
+        transform: scale(1.1) rotate(-10deg);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+}
+
+        footer {
+            background-color: #0083e7;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffd700;
+        } 
+        nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+nav a:hover{
+    color: #f39c12;
+
+}
+
+.offers {
+    padding: 40px 10%;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.offers h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.offer-image img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.offer-details {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.offer-details h3 {
+    font-size: 28px;
+    color: #ffcc00;
+}
+
+.offer-details p {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.offer-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.offer-button:hover {
+    background-color: #f39c12;
+}
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="font-family: 'Playfair Display', serif;">FRESH FEAST - Enjoy the Taste</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="ORDER.HTML">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content" style="font-family: 'Playfair Display', serif;">
+        <h2>Welcome to FRESH FEAST - The Best Outlet in Town!</h2>
+        <p>Indulge in our delicious menu, from yummy veg course to crispy non veg course!</p>
+    </div>
+
+    <div class="menu-section">
+        <H2>MUST TRY MENU</H2>
+        <div class="menu-item">
+            <img src="burger.jpg" alt="BURGER">
+            <h3>BURGER</h3>
+        </div>
+        <div class="menu-item">
+            <img src="BUTTER CHICKEN.jpeg" alt="Chicken Sandwich">
+            <h3>BUTTER CHICKEN</h3>
+        </div>
+        <div class="menu-item">
+            <img src="CHOLE BHATURE.jpeg" alt="Fries">
+            <h3>CHOLE BHATURE</h3></div>
+    </div>
+            <div class="menu-section">
+            <section id="offers" class="offers">
+                <h2>Special Offers</h2>
+                <div class="offer">
+                    <div class="offer-image">
+                        <img src="wp8465832-dinner-food-wallpapers.jpg" alt="Combo Meal">
+                    </div>
+                    <div class="offer-details">
+                        <h3>Exclusive Combo Meal</h3>
+                        <p>Get a full meal with fries and a drink for an unbeatable price!</p>
+                        <a href="#order" class="offer-button">Order Now</a>
+                    </div>
+                </div>
+                <div class="offer">
+                    <div class="offer-image">
+                        <img src="wp8465834-dinner-food-wallpapers.jpg" alt="Buy 1 Get 1 Free">
+                    </div>
+                    <div class="offer-details">
+                        <h3>Buy 1 Get 1 Free</h3>
+                        <p>Order one meal and get another free. Limited time only!</p>
+                        <a href="#order" class="offer-button">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            </section>
